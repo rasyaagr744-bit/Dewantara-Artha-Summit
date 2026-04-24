@@ -1,1 +1,0 @@
-# Dewantara-Artha-Summit
