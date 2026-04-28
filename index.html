@@ -42,8 +42,16 @@ section {
 .card {
   background: #eee;
   padding: 20px;
-  margin: 10px 0;
+  margin: 0;
   border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+  
+  .list-paket {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 </style>
 
@@ -117,6 +125,28 @@ section {
     <h3>Private Trip</h3>
     <p>Custom sesuai kebutuhan</p>
   </div>
+
+  #paket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#paket h2 {
+  width: 100%;
+  text-align: center;
+}
+
+#paket .card {
+  width: 250px;
+}
+
+#paket {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
 </section>
 
