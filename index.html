@@ -12,6 +12,7 @@ body {
   background: #f5f5f5;
 }
 
+/* HEADER */
 header {
   background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover;
   color: white;
@@ -30,8 +31,10 @@ header h1 {
   text-decoration: none;
   margin: 10px;
   display: inline-block;
+  border-radius: 5px;
 }
 
+/* SECTION */
 section {
   padding: 40px;
   background: white;
@@ -39,19 +42,20 @@ section {
   border-radius: 10px;
 }
 
-.card {
-  background: #eee;
-  padding: 20px;
-  margin: 0;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-  
-  .list-paket {
+/* LIST PAKET (GRID) */
+.list-paket {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: #eee;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 </style>
 
@@ -78,76 +82,57 @@ section {
 <section id="paket">
   <h2>Paket Trip</h2>
 
-  <div class="card">
-    <h3>Gunung Luhur</h3>
-    <p>TEKTOK</p>
-    <p>Rp100.000/PACK</p>
+  <div class="list-paket">
+
+    <div class="card">
+      <h3>Gunung Luhur</h3>
+      <p>TEKTOK</p>
+      <p>Rp100.000/PACK</p>
+    </div>
+
+    <div class="card">
+      <h3>Kawah Ratu</h3>
+      <p>TEKTOK</p>
+      <p>Rp130.000/PACK</p>
+    </div>
+
+    <div class="card">
+      <h3>Bukit Cisadon</h3>
+      <p>TEKTOK</p>
+      <p>Rp70.000/PACK</p>
+    </div>
+
+    <div class="card">
+      <h3>Bukit Daolong</h3>
+      <p>TEKTOK</p>
+      <p>Rp70.000/PACK</p>
+    </div>
+
+    <div class="card">
+      <h3>Bukit Panisaan</h3>
+      <p>TEKTOK</p>
+      <p>Rp70.000/PACK</p>
+    </div>
+
+    <div class="card">
+      <h3>GN. Gede Pangrango</h3>
+      <p>TEKTOK</p>
+      <p>Rp170.000/PACK</p>
+    </div>
+
+    <div class="card">
+      <h3>G. Butik</h3>
+      <p>TEKTOK</p>
+      <p>Rp100.000/PACK</p>
+      <p>Rp120.000 MEPO STASIUN</p>
+    </div>
+
+    <div class="card">
+      <h3>Private Trip</h3>
+      <p>Custom sesuai kebutuhan</p>
+    </div>
+
   </div>
-
-  <div class="card">
-    <h3>Kawah Ratu</h3>
-    <p>TEKTOK</p>
-    <p>Rp130.000/PACK</p>
-  </div>
-
-  <div class="card">
-    <h3>Bukit Cisadon</h3>
-    <p>TEKTOK</p>
-    <p>Rp70.000/PACK</p>
-  </div>
-
-  <div class="card">
-    <h3>Bukit Daolong</h3>
-    <p>TEKTOK</p>
-    <p>Rp70.000/PACK</p>
-  </div>
-
-  <div class="card">
-    <h3>Bukit Panisaan</h3>
-    <p>TEKTOK</p>
-    <p>Rp70.000/PACK</p>
-  </div>
-
-  <div class="card">
-    <h3>GN. Gede Pangrango</h3>
-    <p>TEKTOK</p>
-    <p>Rp170.000/PACK</p>
-  </div>
-
-  <div class="card">
-    <h3>G. Butik</h3>
-    <p>TEKTOK</p>
-    <p>Rp100.000/PACK</p>
-    <P>Rp120.000 MEPO STASIUN</P>
-  </div>
-
-  <div class="card">
-    <h3>Private Trip</h3>
-    <p>Custom sesuai kebutuhan</p>
-  </div>
-
-  #paket {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#paket h2 {
-  width: 100%;
-  text-align: center;
-}
-
-#paket .card {
-  width: 250px;
-}
-
-#paket {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
 </section>
 
 <section>
@@ -169,7 +154,7 @@ section {
 <section>
   <h2>Kontak</h2>
   <p>WhatsApp: 081584894386</p>
-  <p>Instagram: @dhilz_explore</p>
+  <p>Instagram: @Dewantara Artha Summit</p>
 </section>
 
 </body>
