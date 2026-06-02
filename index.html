@@ -61,6 +61,10 @@ h2 {
   gap: 20px;
 }
 
+  #paket {
+    display: none;
+  }
+
 /* CARD */
 .card {
   background: #eee;
@@ -86,7 +90,7 @@ h2 {
   <h1>Dewantara Artha Summit</h1>
   <p>Guiding Every Step to the Summit</p>
   
-  <a class="btn" href="#paket">Lihat Paket</a>
+  <button class="btn" onclick="showpaket()">Lihat Paket</button>
   <a class="btn" href="https://wa.me/6281584894386">Booking Sekarang</a>
 </header>
 
@@ -186,5 +190,15 @@ h2 {
   </div>
 </section>
 
+  <script>
+function showPaket() {
+  document.getElementById("paket").style.display = "block";
+  document.getElementById("paket").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+</script>
+
+</body>
 </body>
 </html>
