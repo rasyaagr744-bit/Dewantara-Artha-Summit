@@ -236,16 +236,16 @@ Isi Form Booking
 <section>
   <div class="container">
     <h2>Testimoni</h2>
+
     <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSci4Ic0t8hipKotdvvbhX6pRgOfQIYoQWJA-L6S62Te92aFkA/viewform?usp=publish-editor" target="_blank">
-⭐ Beri Rating & Testimoni
-</a>
-    <p>“Awalnya sendiri, sekarang punya banyak teman.”</p>
-    <p>“Cocok buat pemula!”</p>
-    <p>"Tour Guide nya asik, friendly, seru banget!"</p>
-    <p>"Harga cocok buat pelajar, pelayanannya bagus."</p>
+      ⭐ Beri Rating & Testimoni
+    </a>
+
+    <div id="testimoni-list">
+      <p>Memuat testimoni...</p>
+    </div>
   </div>
 </section>
-
 
 </section>
 
@@ -267,6 +267,36 @@ function showPaket() {
 }
 </script>
 
+  <script>
+const sheetURL = "https://docs.google.com/spreadsheets/d/1CIH6ZP-qYHwjLoZymfBzhliLy2Sp2VzrbvfRlRsAl54/gviz/tq?tqx=out:json";
+
+fetch(sheetURL)
+  .then(res => res.text())
+  .then(data => {
+    const json = JSON.parse(data.substring(47).slice(0, -2));
+    const rows = json.table.rows;
+    const testimoniList = document.getElementById("testimoni-list");
+
+    testimoniList.innerHTML = "";
+
+    rows.forEach(row => {
+      const nama = row.c[1]?.v || "Pendaki";
+      const rating = row.c[2]?.v || "⭐⭐⭐⭐⭐";
+      const testimoni = row.c[3]?.v || "";
+
+      if (testimoni !== "") {
+        testimoniList.innerHTML += `
+          <div class="card">
+            <h3>${rating}</h3>
+            <p>"${testimoni}"</p>
+            <small>- ${nama}</small>
+          </div>
+          <br>
+        `;
+      }
+    });
+  });
+</script>
 </body>
 </body>
 </html>
